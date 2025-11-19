@@ -1,0 +1,139 @@
+.jumble-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.hint-display {
+  padding: 15px 30px;
+  background: #fff3bf;
+  border: 2px solid #ffd43b;
+  border-radius: 12px;
+  font-size: 20px;
+  color: #856404;
+  font-weight: bold;
+}
+
+.answer-area {
+  min-height: 100px;
+  padding: 30px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.answer-placeholder {
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.answer-letters {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.answer-letter {
+  width: 60px;
+  height: 70px;
+  background: white;
+  color: #667eea;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.jumbled-letters {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.jumble-letter {
+  width: 70px;
+  height: 70px;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.jumble-letter.available {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+}
+
+.jumble-letter.available:hover {
+  transform: translateY(-5px) rotate(-5deg);
+  box-shadow: 0 8px 20px rgba(81, 207, 102, 0.4);
+}
+
+.jumble-letter.used {
+  background: #e9ecef;
+  color: #adb5bd;
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game-controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.control-btn {
+  padding: 12px 24px;
+  font-size: 18px;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hint-btn {
+  background: #ffd43b;
+  color: #333;
+}
+
+.shuffle-btn {
+  background: #667eea;
+  color: white;
+}
+
+.clear-btn {
+  background: #ff6b6b;
+  color: white;
+}
+
+.check-btn {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+  padding: 12px 40px;
+}
+
+.control-btn:not(:disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.control-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

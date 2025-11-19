@@ -1,0 +1,134 @@
+.syllable-game {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.word-image {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.target-word-display {
+  font-size: 28px;
+}
+
+.target-word-display strong {
+  font-size: 36px;
+  margin-left: 10px;
+}
+
+.speak-button {
+  padding: 12px 24px;
+  background: white;
+  color: #667eea;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.speak-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.selected-syllables {
+  min-height: 100px;
+  padding: 20px;
+  background: #f8f9fa;
+  border: 3px dashed #667eea;
+  border-radius: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.placeholder {
+  color: #adb5bd;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.available-syllables {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100px;
+}
+
+.syllable-card {
+  padding: 20px 30px;
+  font-size: 32px;
+  font-weight: bold;
+  border-radius: 15px;
+  cursor: move;
+  user-select: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.syllable-card.available {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+}
+
+.syllable-card.selected {
+  background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%);
+  color: #333;
+}
+
+.syllable-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.syllable-card:active {
+  transform: scale(0.95);
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.game-button {
+  padding: 15px 40px;
+  font-size: 24px;
+  border-radius: 15px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.game-button.reset {
+  background: #868e96;
+  color: white;
+}
+
+.game-button.check {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+}
+
+.game-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.game-button:not(:disabled):hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}

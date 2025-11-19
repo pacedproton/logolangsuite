@@ -1,0 +1,79 @@
+.safari-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.target-sound-display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  padding: 30px;
+  background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%);
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(255, 140, 0, 0.4);
+}
+
+.sound-letter {
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hear-sound-btn {
+  padding: 12px 24px;
+  background: white;
+  color: #ff6347;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hear-sound-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
+}
+
+.safari-words {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.safari-word-btn {
+  padding: 25px;
+  border-radius: 20px;
+  font-size: 28px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.safari-word-btn.correct-option {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+}
+
+.safari-word-btn.wrong-option {
+  background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%);
+  color: #333;
+}
+
+.safari-word-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.emoji-icon {
+  font-size: 40px;
+}

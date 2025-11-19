@@ -1,0 +1,241 @@
+/* Shared styles for logopedia games */
+
+.logopedia-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.phoneme-display {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 30px;
+  background: #f8f9fa;
+  border-radius: 20px;
+}
+
+.phoneme-bubble {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.word-card {
+  padding: 40px;
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(81, 207, 102, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.big-word {
+  font-size: 56px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.speak-btn {
+  padding: 12px 24px;
+  background: white;
+  color: #37b24d;
+  border-radius: 12px;
+  font-size: 20px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.speak-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.5);
+}
+
+.syllable-hint {
+  font-size: 24px;
+  padding: 15px 30px;
+  background: #fff3bf;
+  border: 2px solid #ffd43b;
+  border-radius: 12px;
+  color: #856404;
+  font-weight: bold;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.option-btn {
+  padding: 25px;
+  font-size: 32px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(81, 207, 102, 0.3);
+}
+
+.option-btn.large {
+  font-size: 48px;
+  padding: 35px;
+}
+
+.option-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(81, 207, 102, 0.5);
+}
+
+.play-sounds-btn {
+  padding: 20px 40px;
+  font-size: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 15px;
+  font-weight: bold;
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  transition: all 0.3s ease;
+}
+
+.play-sounds-btn.large {
+  font-size: 32px;
+  padding: 30px 60px;
+}
+
+.play-sounds-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.5);
+}
+
+.sound-focus {
+  padding: 20px 40px;
+  background: #e7f5ff;
+  border: 3px solid #667eea;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.focus-label {
+  font-size: 18px;
+  color: #495057;
+  margin-bottom: 10px;
+}
+
+.focus-sounds {
+  font-size: 36px;
+  font-weight: bold;
+  color: #667eea;
+}
+
+.minimal-pair-options {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.pair-option-btn {
+  padding: 30px;
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  border-radius: 20px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(81, 207, 102, 0.3);
+}
+
+.pair-option-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 35px rgba(81, 207, 102, 0.5);
+}
+
+.option-word {
+  font-size: 40px;
+  font-weight: bold;
+  color: white;
+}
+
+.hear-option-btn {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 24px;
+}
+
+.cluster-display {
+  padding: 40px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8787 100%);
+  border-radius: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 10px 30px rgba(255, 107, 107, 0.4);
+}
+
+.cluster-text {
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.progress-tracker {
+  font-size: 22px;
+  padding: 12px 30px;
+  background: #e7f5ff;
+  border: 2px solid #667eea;
+  border-radius: 12px;
+  color: #1971c2;
+  font-weight: bold;
+}
+
+.cluster-words {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+.cluster-word-btn {
+  padding: 25px;
+  font-size: 28px;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%);
+  color: #333;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 212, 59, 0.4);
+}
+
+.cluster-word-btn.collected {
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  color: white;
+  animation: bounce 0.5s ease;
+}
+
+.cluster-word-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255, 212, 59, 0.6);
+}

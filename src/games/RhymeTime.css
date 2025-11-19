@@ -1,0 +1,104 @@
+.rhyme-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.rhyme-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 100%;
+  padding: 20px;
+}
+
+.rhyme-card {
+  position: relative;
+  padding: 30px 20px;
+  background: linear-gradient(135deg, #51cf66 0%, #37b24d 100%);
+  border-radius: 20px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(81, 207, 102, 0.3);
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.rhyme-card:not(.matched):hover {
+  transform: translateY(-8px) rotate(2deg);
+  box-shadow: 0 10px 30px rgba(81, 207, 102, 0.5);
+}
+
+.rhyme-card.selected {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: scale(1.1);
+  box-shadow: 0 10px 30px rgba(102, 126, 234, 0.6);
+}
+
+.rhyme-card.matched {
+  background: linear-gradient(135deg, #ffd43b 0%, #fab005 100%);
+  opacity: 0.7;
+  cursor: not-allowed;
+  animation: bounce 0.6s ease;
+}
+
+.word-text {
+  font-size: 32px;
+}
+
+.speak-word-btn {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.speak-word-btn:hover {
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.progress-bar {
+  width: 100%;
+  height: 30px;
+  background: #e9ecef;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #51cf66 0%, #37b24d 100%);
+  transition: width 0.5s ease;
+  border-radius: 15px;
+}
+
+.matched-count {
+  font-size: 24px;
+  color: #667eea;
+  font-weight: bold;
+  padding: 15px 30px;
+  background: #e7f5ff;
+  border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+  .rhyme-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
