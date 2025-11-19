@@ -20,6 +20,20 @@ import MinimalPairsMatch from './games/MinimalPairsMatch';
 import ConsonantClusterQuest from './games/ConsonantClusterQuest';
 import CVCBuilder from './games/CVCBuilder';
 
+// German games
+import ArtikelArcade from './games/ArtikelArcade';
+import PluralPacMan from './games/PluralPacMan';
+import VerbKonjugationQuest from './games/VerbKonjugationQuest';
+import KompositaConstructor from './games/KompositaConstructor';
+import TrennbareVerben from './games/TrennbareVerben';
+import WortschatzWhack from './games/WortschatzWhack';
+import IdiomIsland from './games/IdiomIsland';
+import UmlautsAdventure from './games/UmlautsAdventure';
+import ModalverbenMission from './games/ModalverbenMission';
+import SynonymeAntonymeMatch from './games/SynonymeAntonymeMatch';
+import DiminutivDesigner from './games/DiminutivDesigner';
+import PerfektTenseRace from './games/PerfektTenseRace';
+
 const App = () => {
   const [currentGame, setCurrentGame] = useState(null);
   const [soundEnabled, setSoundEnabled] = useState(true);
@@ -155,6 +169,104 @@ const App = () => {
       icon: '🏗️',
       component: CVCBuilder,
       category: 'spelling'
+    },
+
+    // German Language Games
+    {
+      id: 'artikel-arcade',
+      name: 'Artikel Arcade',
+      description: 'Master German articles: der, die, das!',
+      icon: '🎮',
+      component: ArtikelArcade,
+      category: 'german'
+    },
+    {
+      id: 'plural-pacman',
+      name: 'Plural Pac-Man',
+      description: 'Collect German plurals in a maze!',
+      icon: '👾',
+      component: PluralPacMan,
+      category: 'german'
+    },
+    {
+      id: 'verb-konjugation',
+      name: 'Verb Konjugation Quest',
+      description: 'Conjugate German verbs correctly!',
+      icon: '⚔️',
+      component: VerbKonjugationQuest,
+      category: 'german'
+    },
+    {
+      id: 'komposita',
+      name: 'Komposita Constructor',
+      description: 'Build German compound words!',
+      icon: '🏗️',
+      component: KompositaConstructor,
+      category: 'german'
+    },
+    {
+      id: 'trennbare-verben',
+      name: 'Trennbare Verben',
+      description: 'Separate German prefix verbs!',
+      icon: '🔀',
+      component: TrennbareVerben,
+      category: 'german'
+    },
+    {
+      id: 'wortschatz-whack',
+      name: 'Wortschatz Whack-a-Mole',
+      description: 'Learn German vocabulary categories!',
+      icon: '🔨',
+      component: WortschatzWhack,
+      category: 'german'
+    },
+    {
+      id: 'idiom-island',
+      name: 'Idiom Island',
+      description: 'Master German idioms and expressions!',
+      icon: '🏝️',
+      component: IdiomIsland,
+      category: 'german'
+    },
+    {
+      id: 'umlauts-adventure',
+      name: 'Umlauts Adventure',
+      description: 'Practice ä, ö, ü in German words!',
+      icon: '⛰️',
+      component: UmlautsAdventure,
+      category: 'german'
+    },
+    {
+      id: 'modalverben',
+      name: 'Modalverben Mission',
+      description: 'Use German modal verbs correctly!',
+      icon: '🎯',
+      component: ModalverbenMission,
+      category: 'german'
+    },
+    {
+      id: 'synonyme-antonyme',
+      name: 'Synonyme & Antonyme Match',
+      description: 'Match German synonyms and antonyms!',
+      icon: '🎭',
+      component: SynonymeAntonymeMatch,
+      category: 'german'
+    },
+    {
+      id: 'diminutiv',
+      name: 'Diminutiv Designer',
+      description: 'Create German diminutives with -chen and -lein!',
+      icon: '🎨',
+      component: DiminutivDesigner,
+      category: 'german'
+    },
+    {
+      id: 'perfekt-tense',
+      name: 'Perfekt Tense Race',
+      description: 'Form German perfect tense quickly!',
+      icon: '⚡',
+      component: PerfektTenseRace,
+      category: 'german'
     }
   ];
 
@@ -163,7 +275,8 @@ const App = () => {
     spelling: '✏️ Spelling',
     phonics: '🔊 Phonics',
     syllables: '👏 Syllables',
-    reading: '📖 Reading'
+    reading: '📖 Reading',
+    german: '🇩🇪 Deutsch'
   };
 
   const [selectedCategory, setSelectedCategory] = useState('all');
@@ -188,10 +301,10 @@ const App = () => {
       <header className="app-header">
         <h1 className="app-title">
           <span className="title-emoji">🎮</span>
-          Kids Spelling & Speech Games
-          <span className="title-emoji">📚</span>
+          Kids Spelling & German Language Games
+          <span className="title-emoji">🇩🇪</span>
         </h1>
-        <p className="app-subtitle">30 Fun Games to Learn Reading, Spelling & Speech!</p>
+        <p className="app-subtitle">28 Interactive Games: English Phonics + German Language Learning!</p>
 
         <button className="sound-toggle" onClick={toggleSound}>
           {soundEnabled ? '🔊 Sound On' : '🔇 Sound Off'}
